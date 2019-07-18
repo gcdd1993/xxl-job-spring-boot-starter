@@ -43,11 +43,14 @@ public class XxlJobAutoConfiguration {
         XxlJobSpringExecutor xxlJobSpringExecutor = new XxlJobSpringExecutor();
 
         xxlJobSpringExecutor.setAdminAddresses(xxlJobProperties.getAdminAddresses());
+        xxlJobSpringExecutor.setAccessToken(xxlJobProperties.getAccessToken());
+
+        xxlJobSpringExecutor.setAppName(xxlJobProperties.getExecutor().getAppName());
         xxlJobSpringExecutor.setIp(xxlJobProperties.getExecutor().getIp());
         xxlJobSpringExecutor.setPort(xxlJobProperties.getExecutor().getPort());
-        xxlJobSpringExecutor.setAccessToken(xxlJobProperties.getAccessToken());
         xxlJobSpringExecutor.setLogPath(xxlJobProperties.getExecutor().getLogPath());
         xxlJobSpringExecutor.setLogRetentionDays(xxlJobProperties.getExecutor().getLogRetentionDays());
+
 
         return xxlJobSpringExecutor;
     }
