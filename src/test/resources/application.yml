@@ -8,3 +8,5 @@ xxl:
       port: 8989
       log-path: "/data/xxl-job/log/job-handler"
       log-retention-days: 7
+server:
+  port: 8990
