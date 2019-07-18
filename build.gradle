@@ -22,7 +22,7 @@ apply plugin: "io.franzbecker.gradle-lombok"
 apply plugin: 'com.novoda.bintray-release'
 
 group = 'io.github.gcdd1993'
-version = 'v0.0.0'
+version = 'v0.1.0'
 sourceCompatibility = JavaVersion.VERSION_1_8
 
 repositories {

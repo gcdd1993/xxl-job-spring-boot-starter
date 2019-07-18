@@ -1,6 +1,10 @@
 xxl:
   job:
     admin-addresses: "http://127.0.0.1:8080/xxl-job-admin"
+    access-token:
     executor:
       app-name: "xxl-job-spring-boot-starter-test"
+      ip:
       port: 8989
+      log-path: "/data/xxl-job/log/job-handler"
+      log-retention-days: 7
