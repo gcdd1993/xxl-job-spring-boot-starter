@@ -1,0 +1,45 @@
+{
+  "groups": [
+    {
+      "name": "xxlJob",
+      "type": "io.github.gcdd1993.xxljob.autoconfigure.XxlJobProperties",
+      "sourceType": "io.github.gcdd1993.xxljob.autoconfigure.XxlJobProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "xxl.job.admin-addresses",
+      "type": "java.lang.String",
+      "description": "xxl job admin 服务地址."
+    },
+    {
+      "name": "xxl.job.access-token",
+      "type": "java.lang.String"
+    },
+    {
+      "name": "xxl.job.executor.app-name",
+      "type": "java.lang.String",
+      "description": "xxl job执行器名称."
+    },
+    {
+      "name": "xxl.job.executor.ip",
+      "type": "java.lang.String",
+      "description": "xxl job执行器IP."
+    },
+    {
+      "name": "xxl.job.executor.port",
+      "type": "java.lang.Integer",
+      "description": "xxl job执行器端口."
+    },
+    {
+      "name": "xxl.job.executor.log-path",
+      "type": "java.lang.String",
+      "description": "xxl job执行器日志目录."
+    },
+    {
+      "name": "xxl.job.executor.log-retention-days",
+      "type": "java.lang.Integer",
+      "description": "xxl job执行器日志保留天数."
+    }
+  ]
+}

@@ -1,7 +1,10 @@
 package io.github.gcdd1993.model;
 
 import lombok.Data;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 
+import java.lang.reflect.Field;
 import java.util.Date;
 
 /**
@@ -12,11 +15,6 @@ import java.util.Date;
  */
 @Data
 public class XxlJobInfo {
-
-    /**
-     * 主键ID
-     */
-    private int id;
 
     /**
      * 执行器主键ID
@@ -72,5 +70,28 @@ public class XxlJobInfo {
      * 失败重试次数
      */
     private int executorFailRetryCount;
+
+    /**
+     * GLUE类型	#com.xxl.job.core.glue.GlueTypeEnum
+     */
+    private String glueType;
+
+    public MultiValueMap<String, Object> toMultiValueMap() {
+        MultiValueMap<String, Object> map = new LinkedMultiValueMap<>(20);
+        Field[] fields = XxlJobInfo.class.getDeclaredFields();
+        try {
+            for (Field field : fields) {
+                String fieldName = field.getName();
+                Object value = field.get(this);
+                if (value != null) {
+                    map.set(fieldName, value);
+                }
+            }
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+
+        return map;
+    }
 
 }

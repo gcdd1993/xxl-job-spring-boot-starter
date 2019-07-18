@@ -42,7 +42,7 @@ public interface XxlJobClient {
      * @param id 任务ID
      * @return if pause success
      */
-    ReturnT<String> pause(int id);
+    ReturnT<String> stop(int id);
 
     /**
      * 启动任务
