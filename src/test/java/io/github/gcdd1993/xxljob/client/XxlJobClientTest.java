@@ -1,7 +1,7 @@
-package io.github.gcdd1993.client;
+package io.github.gcdd1993.xxljob.client;
 
 import com.xxl.job.core.biz.model.ReturnT;
-import io.github.gcdd1993.model.XxlJobInfo;
+import io.github.gcdd1993.xxljob.model.XxlJobInfo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

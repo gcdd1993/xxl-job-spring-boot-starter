@@ -1,4 +1,4 @@
-package io.github.gcdd1993.model;
+package io.github.gcdd1993.xxljob.model;
 
 import lombok.Data;
 import org.springframework.util.LinkedMultiValueMap;

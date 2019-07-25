@@ -2,11 +2,10 @@ package io.github.gcdd1993.xxljob.autoconfigure;
 
 import com.xxl.job.core.executor.XxlJobExecutor;
 import com.xxl.job.core.executor.impl.XxlJobSpringExecutor;
-import io.github.gcdd1993.client.XxlJobClient;
-import io.github.gcdd1993.client.XxlJobClientImpl;
-import io.github.gcdd1993.model.XxlJobInfo;
+import io.github.gcdd1993.xxljob.client.XxlJobClient;
+import io.github.gcdd1993.xxljob.client.XxlJobClientImpl;
+import io.github.gcdd1993.xxljob.model.XxlJobInfo;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -57,14 +56,12 @@ public class XxlJobAutoConfiguration {
 
     @Bean
     @ConditionalOnMissingBean
-    @ConditionalOnBean({RestTemplate.class})
     public XxlJobClient xxlJobClient(RestTemplate restTemplate, XxlJobProperties xxlJobProperties) {
         return new XxlJobClientImpl(restTemplate, xxlJobProperties);
     }
 
     @Bean
     @ConditionalOnMissingBean
-    @ConditionalOnClass({RestTemplate.class})
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
